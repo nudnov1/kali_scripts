@@ -3,3 +3,29 @@ nmap -v -A -sV 192.168.1.1
 
 ### Using TCP mode (–tcp) to probe port 22 (-p 22) using the SYN flag (–flags syn) with a TTL of 2 (–ttl 2) on the remote host (192.168.1.1):
 nping --tcp -p 22 --flags syn --ttl 2 192.168.1.1
+
+###Nmap command 1: nmap -T4 for timing
+nmap -T4 192.168.56.102 
+
+###Nmap command 2: nmap –sS for TCP SYN scan
+nmap -sS 192.168.56.102
+
+###Nmap command 3: nmap -sF for FIN Scan
+nmap -sF 192.168.56.102 
+
+###Nmap command 4: nmap –v for Verbose Mode
+nmap -sF -v 192.168.56.102
+
+### Nmap command 5: nmap -p for Port Scan
+   #Single port scan: 
+nmap -p21 192.168.56.102
+   #Multiple scan ports: 
+nmap -p21, 80, 443 192.168.56.102
+   #scan Ports Range: 
+nmap -p20-1000
+
+### Nmap command 6: Nmap –PE for ICMP Echo Request Ping
+nmap -PE 192.168.56.102
+
+### Nmap command 7: nmap –PA for TCP ACP Ping 
+nmap -PA 192.168.56.102
